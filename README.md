@@ -1,7 +1,7 @@
 # AWS_Powershell
 non-fancy quick stuff
 
-sendemail_sns.ps1 - sample send email using AWS SES
+sendemail_sns.ps1 - sample send email using AWS SES<br />
 AWSInstance_exportcsv.ps1 - exports instance into csv file
 DeleteS3Bucket.ps1 - bulk delete S3 buckets
 GetSSMStatus_forallinstances.ps1 - get's AWS SSM status for each instance, dumps results into csv
