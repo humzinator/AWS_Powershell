@@ -1,7 +1,7 @@
 ﻿Import-Module AWSPowershell
 Set-AWSCredential -ProfileName ProfileName
 
-$InstanceID = (Get-EC2Instance -Filter @(@{name='tag:Name'; values="UICDEV*"})).Instances.InstanceId
+$InstanceID = (Get-EC2Instance -Filter @(@{name='tag:Name'; values="UIX*"})).Instances.InstanceId
 
 $tag = New-Object Amazon.EC2.Model.Tag
 $tag.Key = "Scheduler"
