@@ -1,7 +1,7 @@
 ﻿Import-Module AWSPowershell
 Set-AWSCredential -ProfileName ProfileName
 
-$Users = (Import-CSV C:\users\hjavaid\Desktop\MOSES_group1.csv)
+$Users = (Import-CSV C:\users\profile\little-dipper\MOSES_group1.csv)
 
 $BundleID = 'wsb-xxxx'
 $DirectoryID = 'd-xxxx'
