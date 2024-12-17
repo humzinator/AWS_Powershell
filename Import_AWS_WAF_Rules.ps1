@@ -3,10 +3,10 @@
 $ChangeList =  New-Object System.Collections.Generic.List[System.Object]
 $Queue_ChangeList =  New-Object System.Collections.Generic.List[System.Object]
 
-$IPSetId = '9c7ca899-0e35-4044-bfc0-aa044d0971e5'
+$IPSetId = '9c7009-0e35-4044-bfc0-aa044d0971e00'
 
 #Get the list of IP addresses from a file
-$IP_Addresses = Get-Content -Path C:\Users\hjavaid\Desktop\Fraud_IPs.txt
+$IP_Addresses = Get-Content -Path C:\Users\profile\big-dipper\Fraud_IPs.txt
 
 #for each object in the file - Build Change List
 $IP_Addresses | foreach {
@@ -84,7 +84,7 @@ else {write-host "Done!"}
 
 #Update WAF Regional IP set 
 Write-Output "Submiting Changes"
-#Update-WAFRIPSet -IPSetId  9c7ca899-0e35-4044-bfc0-aa044d0971e5 -ChangeToken $WAF_Change_Token -Update $Queue_ChangeList
+#Update-WAFRIPSet -IPSetId  9c7009-0e35-4044-bfc0-aa044d0971e00 -ChangeToken $WAF_Change_Token -Update $Queue_ChangeList
 
 
 
