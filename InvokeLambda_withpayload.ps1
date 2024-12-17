@@ -1,5 +1,5 @@
 ﻿Import-Module AWSPowershell
-Set-DefaultAWSRegion -Region us-east-1
+Set-DefaultAWSRegion -Region us-west-1
 Set-AWSCredential -ProfileName Account-Core
 
 $AccountID = (Get-STSCallerIdentity).Account
@@ -9,7 +9,7 @@ $AccountID = (Get-STSCallerIdentity).Account
 @"
 {"detail":{"instance-id": "$_", "account-number": "$AccountID"}}
 "@
-    Set-AWSCredential -ProfileName MassIT-Core
+    Set-AWSCredential -ProfileName Navy-Core
     $logR = (Invoke-LMFunction -FunctionName Update_PatchGroupTag -payload $lambda_playload -LogType Tail).LogResult
 
     $sDecodedString=[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($logR))
